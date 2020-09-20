@@ -19,7 +19,7 @@ function showColumns() {
             });
 
             if (response == "[]") {
-                $("#result").html("La table " + $("#selectTable").val() + " n'a aucune colonne");
+                $("#result").html("Table " + $("#selectTable").val() + " has no columns");
             } else {
                 $("#result").html("");
                 showData();
@@ -33,9 +33,7 @@ function showColumns() {
         }
     });
 
-
 }
-
 
 
 /***************************afficher toutes les tables d'une base de données*************************/
@@ -60,7 +58,7 @@ function showTables() {
 
 
             if (response == "[]") {
-                $("#result").html("La DB " + $("#selectDB").val() + " n'a aucune table");
+                $("#result").html("DB " + $("#selectDB").val() + " has no table");
             } else {
                 showColumns();
                 $("#result").html("");

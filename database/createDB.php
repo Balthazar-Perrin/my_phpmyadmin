@@ -8,7 +8,7 @@ $name = $_POST['name'];
 
 try {
     $pdo->exec("CREATE DATABASE $name");
-    echo "Database ". $name ." created successfully\n";
+    echo "Database $name created successfully";
 } catch (PDOException $e) {
     die("ERROR creating database $name : ". $e->getMessage());
 }

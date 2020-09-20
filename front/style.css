@@ -5,7 +5,8 @@ input, button {
 .basicDiv {
     border: solid 1px black;
     padding: 1%;
-    margin: 1%;
+    margin: 1%;  
+    display: inline-block; 
 }
 
 select {
@@ -14,7 +15,7 @@ select {
 
 #selectDB, #selectTable {
     width: 15%;
-    margin: 0 8% 0 8%;
+    margin: 1% 1% 0 1%;
 }
 
 tr, th {
@@ -30,13 +31,12 @@ table, th, tr {
 }
 
 #databases, #tables {
-    display: inline-block;
     width: 45%;
 }
 
 #wrapper {
     width: 100%;
-display: inline-block;
+    display: inline-block;
 }
 
 #resultDiv {
@@ -44,8 +44,16 @@ display: inline-block;
     position: sticky; top: -10; 
     margin: -20px 0 0 -15px;
     padding: 0px 15px 0px 10px;
-    background-color: #ccffcc;
-    border: 2px solid #99ff99;
+    background-color: #f2f2f2;
+    border: 2px solid #bfbfbf;
     border-bottom-right-radius: 9px;
 }
 
+#inputData, #inputDataColumn {
+    width:340px;
+}
+
+h3 {
+    margin-top: 0%;
+    text-align:center;
+}

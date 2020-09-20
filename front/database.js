@@ -37,7 +37,7 @@ $(document).ready(function () {
       success: function (response) {
         console.log(response);
         $("#result").html(response);
-        $("#inputCreatDB").val("");
+        $("#inputCreateDB").val("");
 
         showDB();
 
@@ -126,7 +126,7 @@ $(document).ready(function () {
 
         $("#responseStatsDB").append("<li>Nombre de tables : " + result[0] + "</li>");
         $("#responseStatsDB").append("<li>Date de création de la première table : " + result[1] + "</li>");
-        $("#responseStatsDB").append("<li>Mémoire utilisée par la base de donnée : " + result[2] + "</li>");
+        $("#responseStatsDB").append("<li>Mémoire utilisée par la base de donnée : " + result[2] + " Mb</li>");
         $("#buttonStatsDB").data('clicked', true);
         $("#result").html("");
 

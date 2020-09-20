@@ -22,7 +22,7 @@ try{
     {
        array_push($result_array, $each[1]);
     }
-    $result = fetchAllFromDB($pdo, "SELECT SUM(data_length + index_length) FROM information_schema.tables WHERE table_schema = '$name'");
+      $result = fetchAllFromDB($pdo, "SELECT SUM(data_length + index_length) / 1024 / 1024 FROM information_schema.tables WHERE table_schema = '$name'");
     foreach($result as $each) 
     {
        array_push($result_array, $each[0]);
