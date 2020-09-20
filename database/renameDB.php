@@ -1,7 +1,7 @@
 <?php
 
-require_once('../Models/Manager.php');
-require_once('../managerDB.php');
+require_once('../tools/Manager.php');
+require_once('../tools/fetch.php');
 
 $DBnameOld = $_POST['DBnameOld'];
 $DBnameNew = $_POST['DBnameNew'];
