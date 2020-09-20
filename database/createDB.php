@@ -10,7 +10,7 @@ try {
     $pdo->exec("CREATE DATABASE $name");
     echo "Database ". $name ." created successfully\n";
 } catch (PDOException $e) {
-    echo "Error creating database ". $name ." : ". $e->getMessage(). "\n";
+    die("ERROR creating database $name : ". $e->getMessage());
 }
 
 ?>

@@ -10,7 +10,7 @@ try {
     $pdo->exec("DROP DATABASE $name");
     echo "Database ". $name ." dropped successfully";
 } catch (PDOException $e) {
-    echo "Error dropping database ". $name ." : ". $e->getMessage()."\n";
+    die("ERROR dropping database $name: ". $e->getMessage());
 }
 
 ?>

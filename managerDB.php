@@ -17,6 +17,4 @@ function fetchAllFromDB($pdo, $query) {
 }
 
 
-
-
 ?>

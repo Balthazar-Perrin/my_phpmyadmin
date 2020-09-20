@@ -1,3 +1,16 @@
-#inputCreateDB {
-    margin-bottom: 100px;
+input, button {
+    margin-bottom: 10px;
+}
+
+div {
+    border: solid 1px black;
+    padding: 1%;
+    margin: 1%;
+}
+
+
+select {
+    width: 15%;
+
+    margin: 0 8% 0 8%;
 }
