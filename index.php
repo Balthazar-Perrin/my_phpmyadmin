@@ -1,73 +1,68 @@
-<?php
-require_once('./models/Manager.php');
-require_once('./managerDB.php');
-
-$man = new Manager();
-$pdo=$man->pdo;
-
-?>
-
-
-
 <html>
 
 <header>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./table.js"></script>
-    <script type="text/javascript" src="./database.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./front/data.js"></script>
+    <script type="text/javascript" src="./front/table.js"></script>
+    <script type="text/javascript" src="./front/database.js"></script>
+    <link rel="stylesheet" href="./front/style.css">
 </header>
 
 <body>
 
-<p id="result"></p>
-<select id="selectDB" onchange=showTables()>
-</select>
-<select id="selectTable">
-</select>
-<div id="databases">
+    <p id="result"></p>
+
+    <select id="selectDB" onchange=showTables()></select>
+
+    <select id="selectTable" onchange=showColumns()></select>
 
 
-<input id="inputCreateDB" type=text placeholder="nom de la nouvelle DB">
-<button id="buttonCreateDB" >créer DB</button>
-<br>
-<button id="buttonDropDB" >supprimer DB</button>
-<br>
-<input id="inputRenameDBNew" type=text placeholder="nouveau nom">
-<button id="buttonRenameDB" >renommer DB</button>
-<br>
-<button id="buttonStatsDB" >afficher stats DB</button>
-<ul id="responseStatsDB"></ul>
+    <div id="databases">
 
-</div>
+        <input id="inputCreateDB" type=text placeholder="nom de la nouvelle DB">
+        <button id="buttonCreateDB">créer DB</button>
+        <br>
+        <button id="buttonDropDB">supprimer DB</button>
+        <br>
+        <input id="inputRenameDBNew" type=text placeholder="nouveau nom">
+        <button id="buttonRenameDB">renommer DB</button>
+        <br>
+        <button id="buttonStatsDB">afficher stats DB</button>
+        <ul id="responseStatsDB"></ul>
 
-<div id="tables">
+    </div>
 
-<br>
-<input id="inputTable" type=text placeholder="nom de la table">
-<br>
-<input id="inputColumn" type=text placeholder="nom de la colonne">
-<br>
-<select id="dataType" name="dataType">
-    <option value=int>int</option>
-</select>
-<br>
+    <div id="tables">
 
-<button id="buttonAddColumn">Ajouter une colonne</button>
-<ul id="responseShowTables"></ul>
-<br>
+        <br>
+        <input id="inputRenameTable" type=text placeholder="nouveau nom de la table">
+        <button id="buttonRenameTable">Renommer la table</button>
+        <br>
+        <input id="inputColumn" type=text placeholder="nom de la colonne">
+        <br>
+        <select id="selectDataType" name="selectDataType">
+            <option value=int>INT</option>
+        </select>
+        <br>
+
+        <button id="buttonAddColumn">Ajouter une colonne</button>
+        <br>
+        <button id="buttonDropColumn">Supprimer une colonne</button>
+
+        <br>
 
 
-</div>
+    </div>
+
+
+    <table id="tableData">
+        <tr id="trColumn">
+        </tr>
+    </table>
 
 
 
-
-
-<!--
-<button onclick="getDatabases($pdo)">Créer une base de données</button>
-<button onclick="getElementById('demo').innerHTML = getDatabases()">Afficher les bases de données</button>
- -->
 </body>
+
 </html>

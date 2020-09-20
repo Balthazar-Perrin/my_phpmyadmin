@@ -1,6 +1,6 @@
 <?php 
 
-require_once('../models/Manager.php');
+require_once('../tools/Manager.php');
 
 $man = new Manager();
 $pdo=$man->pdo;

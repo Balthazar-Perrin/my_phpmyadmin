@@ -1,7 +1,8 @@
 <?php
 
-require_once("../models/Manager.php");
-require_once("../managerDB.php");
+require_once('../tools/Manager.php');
+require_once('../tools/fetch.php');
+
 
 $man = new Manager();
 $pdo = $man->pdo; 
